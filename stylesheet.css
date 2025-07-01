@@ -1549,12 +1549,12 @@ section {
   }
 
   .radial-bars {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
   }
 
   .radial-bar {
-    max-width: 160px;
+    max-width: 150px;
     flex: 1 1 45%;
   }
 
