@@ -1770,3 +1770,13 @@ section {
 
 
     
+/* Universal Box-Sizing Reset - CRITICAL for responsive design */
+*, *::before, *::after {
+    box-sizing: border-box;
+    /* You can also add a general margin/padding reset here if you haven't: */
+    /* margin: 0; */
+    /* padding: 0; */
+}
+html {
+    font-size: 16px;
+}
