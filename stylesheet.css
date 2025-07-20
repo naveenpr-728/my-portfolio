@@ -1461,7 +1461,6 @@ section {
 
 
 /* ========== Responsive Design ========== */
-
 @media (max-width: 768px) {
   .header {
     padding: 10px 5%;
@@ -1473,13 +1472,13 @@ section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     margin-top: 10px;
   }
 
   .navbar a {
     font-size: 18px;
-    margin:8px;
+    margin: 8px;
   }
 
   .home {
@@ -1487,7 +1486,9 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 60px 5% 30px;
   }
+
   .home-content h1 {
     font-size: 24px;
   }
@@ -1506,12 +1507,16 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-top: 15px;
   }
-.home-sci{
-  
+
+  .home-sci {
+    display: flex;
     justify-content: center;
-  
-}
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
   .home-sci a {
     width: 30px;
     height: 30px;
@@ -1519,17 +1524,19 @@ section {
     margin: 5px;
   }
 
- .scan-image {
-  display: block;
-  max-width: 80%;
-  height: auto;
-  margin: 20px auto;
-}
+  .scan-image {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
 
   .about {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 20px 5%;
+    padding: 30px 5%;
   }
 
   .about-img img {
@@ -1538,29 +1545,29 @@ section {
   }
 
   .about-text h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .about-text h4 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .about-text p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .sub-title {
-    font-size: 36px;
-    padding-bottom: 30px;
+    font-size: 28px;
+    padding-bottom: 20px;
   }
 
-  .container {
+  .container,
+  .container1 {
     padding: 20px 5%;
   }
 
   .services-list {
     grid-template-columns: 1fr;
-    margin-top: 30px;
     grid-gap: 20px;
   }
 
@@ -1568,11 +1575,6 @@ section {
     padding: 20px;
   }
 
-  .services-list div h2 {
-    font-size: 24px;
-  }
-
-  /* Skills Section */
   .skills {
     grid-template-columns: 1fr;
     padding: 20px 5%;
@@ -1581,17 +1583,11 @@ section {
 
   .technical-skills .bar h3,
   .professional-skills .box h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .progress-line {
     height: 10px;
-  }
-
-  .professional-skills .circle {
-    width: 90px;
-    height: 90px;
-    font-size: 16px;
   }
 
   .professional-skills {
@@ -1601,12 +1597,78 @@ section {
     gap: 1.5rem;
   }
 
+  .professional-skills .circle {
+    width: 90px;
+    height: 90px;
+    font-size: 14px;
+  }
+
   .professional-skills .box {
     flex: 1 1 40%;
     min-width: 150px;
   }
-}
 
+  .portfolio-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+
+  .row {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .row img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact {
+    padding: 30px 5%;
+  }
+
+  .contact-text {
+    text-align: center;
+  }
+
+  .contact-list li {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+  }
+
+  .contact-icons a {
+    font-size: 20px;
+  }
+
+  .contact-form form {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .last-text {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 5%;
+  }
+}
 
 
 
