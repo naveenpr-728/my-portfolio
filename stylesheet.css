@@ -1462,7 +1462,7 @@ section {
 
 /* ========== Responsive Design ========== */
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .header {
     padding: 10px 5%;
     flex-direction: column;
@@ -1473,16 +1473,17 @@ section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content:center;
     margin-top: 10px;
   }
 
   .navbar a {
-    font-size: 20px;
-    margin:10px;
+    font-size: 18px;
+    margin:8px;
   }
 
   .home {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1494,11 +1495,12 @@ section {
     padding: 0;
 }
   .home-content h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .home-content h3 {
     font-size: 24px;
+    overflow: visible;
   }
 
   .home-content p {
@@ -1508,13 +1510,21 @@ section {
   .btn-box {
     padding: 10px 20px;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
+.home-sci{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
   .home-sci a {
     width: 35px;
     height: 35px;
     font-size: 16px;
-    margin: 20px 5px;
+    margin: 10px;
   }
 
  .scan-image {
