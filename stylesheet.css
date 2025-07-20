@@ -1462,7 +1462,7 @@ section {
 
 /* ========== Responsive Design ========== */
 
-@media (max-width: 768px) {
+@media (max-width: 1165px) {
   .header {
     padding: 10px 5%;
     flex-direction: column;
