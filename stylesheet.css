@@ -1460,230 +1460,313 @@ section {
 }
 
 
-/* ========== Responsive Design ========== */
+//* ========== Responsive Design ========== */
 @media (max-width: 768px) {
-  .header {
-    padding: 10px 5%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    /* Apply box-sizing globally if not already done in your base CSS */
+    /* This is highly recommended to prevent width issues everywhere */
+    /* If you haven't done it, add this at the very top of your CSS file: */
+    /* *, *::before, *::after {
+        box-sizing: border-box;
+    } */
+    /* If you can't add it globally, we'll add it to specific elements below. */
 
-  .navbar {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
 
-  .navbar a {
-    font-size: 18px;
-    margin: 8px;
-  }
+    .header {
+        padding: 10px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 60px 5% 30px;
-  }
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        /* Ensure navbar itself doesn't cause overflow */
+        box-sizing: border-box;
+    }
 
-  .home-content h1 {
-  font-size: 22px;
-  line-height: 1.3;
-  text-align: center;
-  overflow: visible;
-  white-space: normal;
-  word-break: break-word;
-  margin: 10px 0;
+    .navbar a {
+        font-size: 18px;
+        margin: 8px;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* Refined padding, ensuring horizontal space */
+        padding: 40px 3% 20px;
+        /* Crucial for preventing home section from overflowing if children have issues */
+        box-sizing: border-box;
+    }
+
+    .home-content {
+        width: 100%;
+        /* Adjusted padding to give text more horizontal space without overflow */
+        padding: 0 20px; /* Use px for consistency or a slightly larger percentage if preferred */
+        /* Changed to hidden to prevent any child content from visibly spilling out */
+        overflow: hidden;
+        text-align: center;
+        /* Crucial for content container to respect its 100% width */
+        box-sizing: border-box;
+    }
+
+    .home-content h1 {
+        /* This is the "Naveen Kumar" text */
+        font-size: 20px; /* Slightly reduced for better fit on common mobile widths (e.g., 360-480px) */
+        line-height: 1.2; /* Tighter line height for more compact look */
+        text-align: center;
+        /* These are good for text wrapping */
+        overflow: hidden; /* Changed from visible to hidden to prevent text overflow */
+        white-space: normal;
+        word-break: break-word;
+        margin: 10px 0; /* Keep vertical margin */
+    }
+
+    .home-content h3 {
+        font-size: 18px; /* Adjusted for mobile */
+    }
+
+    .home-content p {
+        font-size: 14px;
+        /* Remove horizontal padding here if .home-content already handles it, to avoid double-padding */
+        padding: 0; /* Changed from 0 10px to 0 */
+        margin: 10px 0; /* Add some vertical margin for spacing */
+    }
+
+    .btn-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Increased gap for better spacing between stacked buttons */
+        margin-top: 20px; /* More space from content above */
+        width: 100%; /* Ensure button container takes full width */
+        /* Crucial for btn-box to respect its width and padding */
+        box-sizing: border-box;
+        padding: 0 20px; /* Add padding to the button box itself to prevent buttons from touching edges */
+    }
+
+    /* Assuming your individual buttons have a class like 'btn' or are direct children */
+    .btn-box a { /* This targets the actual button links */
+        width: 100%; /* Make buttons full width of their container (btn-box) */
+        max-width: 280px; /* Max width to prevent them from becoming excessively wide on larger mobile screens */
+        box-sizing: border-box; /* Crucial for buttons to respect their width with padding/border */
+        text-align: center; /* Ensure text inside buttons is centered */
+    }
+
+
+    .home-sci {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px; /* Increased margin for better spacing from buttons */
+        gap: 10px; /* Added gap for consistent spacing between icons */
+    }
+
+    .home-sci a {
+        width: 35px; /* Slightly larger touch target for icons */
+        height: 35px;
+        font-size: 16px; /* Slightly larger icon font size */
+        /* If using gap on parent, individual margin might not be needed */
+        margin: 0; /* Removed individual margin if gap is used on parent */
+    }
+
+    .scan-image { /* This is likely your profile picture */
+        display: block;
+        max-width: 70%; /* Reduced image size for more space for text */
+        height: auto;
+        margin: 20px auto;
+        /* Ensure image also respects its max-width and doesn't spill */
+        box-sizing: border-box;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 5%;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .about-img img {
+        margin: 0 auto 20px;
+        width: 250px;
+        max-width: 90%; /* Ensure image doesn't overflow if 250px is too wide */
+        height: auto;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text h4 {
+        font-size: 18px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+        padding: 0 10px; /* Ensure paragraph text has some horizontal padding */
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .sub-title {
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+
+    .container,
+    .container1 {
+        padding: 20px 5%;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .services-list div {
+        padding: 20px;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+        padding: 20px 5%;
+        gap: 1rem;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .technical-skills .bar h3,
+    .professional-skills .box h4 {
+        font-size: 16px;
+    }
+
+    .progress-line {
+        height: 10px;
+    }
+
+    .professional-skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .professional-skills .circle {
+        width: 90px;
+        height: 90px;
+        font-size: 14px;
+    }
+
+    .professional-skills .box {
+        flex: 1 1 40%;
+        min-width: 150px;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 5%;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .row {
+        width: 100%;
+        max-width: 90%; /* Adjust as needed */
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .row img {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .contact {
+        padding: 30px 5%;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .contact-text {
+        text-align: center;
+    }
+
+    .contact-list li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 15px 0;
+        flex-wrap: wrap;
+    }
+
+    .contact-icons a {
+        font-size: 20px;
+    }
+
+    .contact-form form {
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 12px;
+        box-sizing: border-box; /* Crucial for form elements */
+    }
+
+    .last-text {
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 5%;
+        box-sizing: border-box; /* Add box-sizing */
+    }
 }
 
-.home-content {
-  width: 100%;
-  padding: 0 10px;
-  overflow: visible;
-  text-align: center;
+/* Optional: Add a media query for very small screens (e.g., 320px - 480px)
+   if the 768px changes aren't enough for the smallest phones. */
+@media (max-width: 480px) {
+    .home {
+        padding: 30px 2% 15px; /* Less padding for tiny screens */
+    }
+    .home-content h1 {
+        font-size: 18px; /* Even smaller font for "Naveen Kumar" */
+        line-height: 1.1;
+    }
+    .home-content h3 {
+        font-size: 16px;
+    }
+    .home-content p {
+        font-size: 13px; /* Slightly smaller paragraph text */
+    }
+    .scan-image {
+        max-width: 60%; /* Make the image even smaller */
+    }
+    .btn-box a { /* Target individual buttons */
+        max-width: 200px; /* Narrower buttons for very small screens */
+    }
+    .about-img img {
+        width: 200px; /* Adjust about image size for very small screens */
+        max-width: 80%;
+    }
+    /* Add other specific adjustments for very small screens as needed */
 }
-
-
-  .home-content h3 {
-    font-size: 20px;
-  }
-
-  .home-content p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  .btn-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .home-sci {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-
-  .home-sci a {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    margin: 5px;
-  }
-
-  .scan-image {
-    display: block;
-    max-width: 80%;
-    height: auto;
-    margin: 20px auto;
-  }
-
-  .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px 5%;
-  }
-
-  .about-img img {
-    margin: 0 auto 20px;
-    width: 250px;
-  }
-
-  .about-text h2 {
-    font-size: 28px;
-  }
-
-  .about-text h4 {
-    font-size: 18px;
-  }
-
-  .about-text p {
-    font-size: 14px;
-  }
-
-  .sub-title {
-    font-size: 28px;
-    padding-bottom: 20px;
-  }
-
-  .container,
-  .container1 {
-    padding: 20px 5%;
-  }
-
-  .services-list {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-  }
-
-  .services-list div {
-    padding: 20px;
-  }
-
-  .skills {
-    grid-template-columns: 1fr;
-    padding: 20px 5%;
-    gap: 1rem;
-  }
-
-  .technical-skills .bar h3,
-  .professional-skills .box h4 {
-    font-size: 16px;
-  }
-
-  .progress-line {
-    height: 10px;
-  }
-
-  .professional-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .professional-skills .circle {
-    width: 90px;
-    height: 90px;
-    font-size: 14px;
-  }
-
-  .professional-skills .box {
-    flex: 1 1 40%;
-    min-width: 150px;
-  }
-
-  .portfolio-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 5%;
-  }
-
-  .row {
-    width: 100%;
-    max-width: 90%;
-  }
-
-  .row img {
-    width: 100%;
-    height: auto;
-  }
-
-  .contact {
-    padding: 30px 5%;
-  }
-
-  .contact-text {
-    text-align: center;
-  }
-
-  .contact-list li {
-    font-size: 14px;
-    margin: 8px 0;
-  }
-
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 15px 0;
-    flex-wrap: wrap;
-  }
-
-  .contact-icons a {
-    font-size: 20px;
-  }
-
-  .contact-form form {
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-
-  .last-text {
-    text-align: center;
-    font-size: 12px;
-    padding: 15px 5%;
-  }
-}
-
 
 
     
